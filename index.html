@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+
+<head>
+  <title>Simple Polygon</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script type="module" src="./index.ts"></script>
+</head>
+
+<body>
+  <nav id="menu">
+    <a id="clickDraw" href="#" class="active">Draw</a>
+    <a id="clickShowDraw" href="#" class="active">Display</a>
+    <a id="clickHideOrShowDraw" href="#" class="active">Hide or show draw</a>
+    <a id="clickSave" href="#" class="active">Save</a>
+    <a id="clickNew" href="#" class="active">New</a>
+    <a id="mapSatellite" href="#" class="active">Map satellite</a>
+    <a id="mapNormal" href="#" class="active">Map normal</a>
+  </nav>
+  <div id="map"></div>
+
+  <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaOulQACiJzBfqumbsqg_-vKha8fCnL-s&callback=initMap&libraries=drawing&v=weekly"
+    defer></script>
+</body>
+
+</html>
